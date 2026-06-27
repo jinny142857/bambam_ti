@@ -56,7 +56,9 @@ export default async function handler(req, res) {
       "6. 다음 수업에서 해볼 수 있는 작은 지원";
 
     const promptText = 
-      `[학생 데이터 (익명화)]
+      `역할 지침: ${systemInstruction}
+
+[학생 데이터 (익명화)]
 - 학생 식별명: ${studentAlias}
 - 성적 요약: ${gradeSummary}
 - 학습 특성 및 교사 메모: ${learningTraits}
@@ -76,13 +78,6 @@ export default async function handler(req, res) {
           ]
         }
       ],
-      systemInstruction: {
-        parts: [
-          {
-            text: systemInstruction
-          }
-        ]
-      },
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: 2048
