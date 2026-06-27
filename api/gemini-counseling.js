@@ -36,8 +36,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Gemini 2.5 Pro REST API 엔드포인트 URL 구성
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${apiKey}`;
+    // Gemini 3.1 Flash Lite REST API 엔드포인트 URL 구성
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
 
     // 프롬프트 작성 규칙 및 컨텍스트 제공
     const systemInstruction = 
