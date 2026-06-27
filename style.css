@@ -384,3 +384,179 @@ button {
     width: 100%;
   }
 }
+
+/* AI 학생 상담 전략 도우미 스타일 */
+.counseling-assistant-section {
+  margin-top: 32px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.counseling-assistant-section h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assistant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 860px) {
+  .assistant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.selected-student-box {
+  background: var(--surface-strong);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px dashed var(--muted);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected-student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-row {
+  display: flex;
+  font-size: 14px;
+}
+
+.info-label {
+  font-weight: 800;
+  width: 100px;
+  color: var(--ink);
+}
+
+.info-value {
+  color: var(--muted);
+}
+
+.counseling-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.counseling-form label {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.counseling-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  outline: none;
+  resize: vertical;
+}
+
+.counseling-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13);
+}
+
+.preview-box {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 14px;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #1e1f1c;
+}
+
+.result-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 18px;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #166534;
+  white-space: pre-wrap;
+}
+
+.result-box h4 {
+  margin: 16px 0 8px 0;
+  font-size: 16px;
+  color: #14532d;
+  border-bottom: 1px solid #dcfce7;
+  padding-bottom: 4px;
+}
+
+.result-box h4:first-of-type {
+  margin-top: 0;
+}
+
+.error-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--danger);
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.assistant-footer-notice {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.student-card-counseling-btn {
+  margin-top: 14px;
+  width: 100%;
+}
+
